@@ -1,0 +1,56 @@
+.logo{
+    width: 150px
+}
+
+.heroSection{
+    padding-top: 80px;
+    .heroImage{
+        img{
+            width: 100%
+        }
+    }
+
+    .heroCaption{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        h1{
+            font-size: 50px;
+        }
+        .ctaBtn{
+            margin-top: 30px;
+        }
+    }
+
+    .iconGroup{
+        display: flex;
+        gap: 15px;
+        img{
+            height: 50px;
+        }
+    }
+}
+
+.nearestRestaurant{
+    margin-top: 30px;
+    background: #dedede;
+    padding: 100px 0px
+}
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 991px) {
+    .heroCaption{
+      justify-content: center;
+      text-align: center;
+    }
+}

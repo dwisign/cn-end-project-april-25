@@ -6,7 +6,8 @@
     <title>End Project</title>
 
     <!--Bootstrap css-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!--Custom Style-->
     <link rel="stylesheet" href="css/style.css">
@@ -15,15 +16,16 @@
 
     <!--Nav Menu-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+        <div class="container">
+          <a class="navbar-brand" href="#"><img class="logo" src="assets/Logo.png" /></a>
+          <!-- <div class="brand-text">TEST MY BRAND</div> -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Delivery Info</a>
+                <a class="nav-link" aria-current="page" href="#">Delivery Info</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -43,14 +45,81 @@
                 <a href="#" class="nav-link" aria-disabled="true">Contact</a>
               </li>
             </ul>
-            <!-- <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
           </div>
         </div>
-      </nav>
+    </nav>
     <!--End Nav Menu-->
+
+
+    <!--hero section-->
+    <div class="heroSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="heroCaption">
+                        <h1>Your Food court at home</h1>
+                        <div class="ctaBtn">
+                            <button type="button" class="btn btn-outline-warning">Delivery<br>Order In</button>
+
+                            <button type="button" class="btn btn-outline-warning">Take Out<br>Grab and Go</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="heroImage">
+                        <img src="assets/photo.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="iconGroup">
+                                <img src="assets/time-eat.png" alt="">
+                                <p>delivery in all paris in less than 30 minutes</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="iconGroup">
+                                <img src="assets/delivery.png" alt="">
+                                <p>Free delivery from 29 euros</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="iconGroup">
+                                <img src="assets/paris.png" alt="">
+                                <p>Only fresh and French products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end hero section-->
+
+
+    <!--nearest restaurant section-->
+    <div class="nearestRestaurant">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="nearestRestaurantCaption">
+                        <h1>Your nearest restaurants</h1>
+                        <p>Each kitchen works with its own delivery area to deliver food to you as soon as possible</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-warning" type="button" id="button-addon2">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end nearest restaurant section-->
 
 
     
