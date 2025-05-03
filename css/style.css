@@ -2,6 +2,11 @@
     width: 150px
 }
 
+.navbarWrap{
+    padding-top: 50px;
+}
+
+
 .heroSection{
     padding-top: 80px;
     .heroImage{
