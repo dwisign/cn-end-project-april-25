@@ -9,6 +9,10 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
+    <!--Splide Js-->
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+    
+
     <!--Custom Style-->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +23,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img class="logo" src="assets/Logo.png" /></a>
+                  <a class="navbar-brand" href="index.html"><img class="logo" src="assets/Logo.png" /></a>
                   <!-- <div class="brand-text">TEST MY BRAND</div> -->
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,10 +31,10 @@
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Delivery Info</a>
+                        <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#deliveryInfo">Delivery Info</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,7 +48,7 @@
                         </ul>
                       </li>
                       <li class="nav-item">
-                        <a href="#" class="nav-link" aria-disabled="true">Contact</a>
+                        <a href="contact.html" class="nav-link" aria-disabled="true">Contact</a>
                       </li>
                     </ul>
                   </div>
@@ -55,6 +59,32 @@
     <!--End Nav Menu-->
 
 
+    <!--Popup Modal-->
+    <!-- Modal -->
+    <div class="modal fade" id="deliveryInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Delivery Info</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Each kitchen works with its own delivery area to deliver food to you as soon as possible.</p> 
+
+                <p> 
+                    <strong>Delivery in all Paris in less than 30 minutes</strong>
+                </p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+
+
     <!--hero section-->
     <div class="heroSection">
         <div class="container">
@@ -63,15 +93,19 @@
                     <div class="heroCaption">
                         <h1>Your Food court at home</h1>
                         <div class="ctaBtn">
-                            <button type="button" class="btn btn-outline-warning">Delivery<br>Order In</button>
+                            <button type="button" class="btn btn-outline-warning btnInfoText">Delivery<br>Order In</button>
 
                             <button type="button" class="btn btn-outline-warning">Take Out<br>Grab and Go</button>
                         </div>
+                      
+                        <p class="infoText">
+                            Each kitchen works with its own delivery area to deliver food to you as soon as possible.
+                        </p>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="heroImage">
-                        <img src="assets/photo.jpg" />
+                        <img src="assets/photo.jpg" class="showHidePhoto"/>
                     </div>
                 </div>
             </div>
@@ -125,7 +159,7 @@
     </div>
     <!--end nearest restaurant section-->
 
-    
+
     <!--Maps-->
     <div class="maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d780.1359539102735!2d106.7298384991433!3d-6.241960122674231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1ac5424ca8b%3A0x1a938e76b4bb2b7f!2sdwisign!5e0!3m2!1sen!2sid!4v1746241788849!5m2!1sen!2sid" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -133,16 +167,99 @@
     <!--enMaps-->
 
 
+
+    <!--Slider Menu-->
+    <div class="sliderMenu">
+        <div class="container">
+            <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide"><img src="assets/restaurant.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-1.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-2.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-3.jpg"></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Slider-->
+
+    <!--Slider Menu-->
+    <div class="sliderWithThumbnail">
+        <div class="container">
+            <div class="splide" id="main-slider" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide"><img src="assets/restaurant.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-1.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-2.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-3.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-1.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-2.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-3.jpg"></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sliderWithThumbnail">
+        <div class="container">
+            <div class="splide" id="thumbnail-slider" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide"><img src="assets/restaurant.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-1.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-2.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-3.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-1.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-2.jpg"></li>
+                          <li class="splide__slide"><img src="assets/restaurant-3.jpg"></li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Slider-->
+
+
+    <!--Test Data USer-->
+    <!-- <div class="userData">
+        <div class="container" id="userDataPrint">
+
+        </div>
+    </div> -->
+
+
     
 
 
 
-    
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // //JQUERY
+        // $(document).ready(function(){
+        //     $('.infoText').hide();
+        //     $('.btnInfoText').click(function(){
+        //         $('.infoText').show();
+        //     });
+        // });
+    </script>
 
     <!--Bootstrap Js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
+    <!--Splide Js-->
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+
+    <script src="path-to-the-script/splide-extension-auto-scroll.min.js"></script>
+
     <!--myJs-->
     <script src="js/index.js"></script>
+
 </body>
 </html>

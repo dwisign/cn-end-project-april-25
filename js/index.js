@@ -1,3 +1,76 @@
+//SPLIDE JS
+var splide = new Splide( '.splide', {
+    type   : 'loop',
+    perPage: 4,
+    perMove: 1,
+    autoWidth: true,
+    autoScroll: {
+        speed: 2,
+    },
+    breakpoints: {
+        991: {
+          perPage: 2,
+          gap    : '.7rem'
+        },
+        640: {
+          perPage: 1,
+          gap    : '.7rem'
+        },
+    },
+  });
+  
+splide.mount();
+// new Splide( '.splide' ).mount( window.splide.Extensions );
+
+var main = new Splide( '#main-slider', {
+    type       : 'fade',
+    heightRatio: 0.5,
+    pagination : false,
+    arrows     : false,
+    cover      : true,
+  } );
+  
+  var thumbnails = new Splide( '#thumbnail-slider', {
+    rewind          : true,
+    fixedWidth      : 104,
+    fixedHeight     : 58,
+    isNavigation    : true,
+    gap             : 10,
+    focus           : 'center',
+    pagination      : false,
+    cover           : true,
+    dragMinThreshold: {
+      mouse: 4,
+      touch: 10,
+    },
+    breakpoints : {
+      640: {
+        fixedWidth  : 66,
+        fixedHeight : 38,
+      },
+    },
+  } );
+  
+  main.sync( thumbnails );
+  main.mount();
+  thumbnails.mount();
+
+
+  //JQUERY
+  $(document).ready(function(){
+        $('.showHidePhoto').show();
+
+        // $('.btnInfoText').click(function(){
+        //     $('.infoText').show();
+        // });
+
+        $('.btnInfoText').click(function(){
+            $('.showHidePhoto').toggle('fast');
+        });
+    });
+
+  
+//JS PRACTICE
 var data = [
     'Agya',
     'Calya',
@@ -195,11 +268,34 @@ const users =  [
     }
 ]
 
+const listUser = document.getElementById('userDataPrint')
 users.forEach(user => {
     for(let v in user){
-        console.log(user[v])
+        //console.log(user[v])
+        //document.writeln(user[v] + '<br>')
+        //document.getElementById("userDataPrint").innerHTML = user[v];
+        const dataUserMap = users.map(user => 
+            `<div class="col-lg-4 col-md-6">
+                <img src="${user.avatar}" width="100%"><br><br>
+                <p>
+                    ${user.email}<br>
+                    ${user.first_name}<br>
+                    ${user.last_name}
+                </p>
+            </div>`
+        ).join('')
+
+        listUser.innerHTML = `<div class="row">${dataUserMap}</div>`
     }
 })
+
+
+
+
+
+
+
+
 
 
 
